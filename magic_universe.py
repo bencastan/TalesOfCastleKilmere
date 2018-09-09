@@ -1,6 +1,6 @@
 class CastleKilmereMember:
     """
-    Creates a memeber of the Castle Kilmere School of Magic
+    Creates a member of the Castle Kilmere School of Magic
     """
 
     def __init__(self, name, birthyear, sex):
@@ -36,8 +36,9 @@ class Pupil(CastleKilmereMember):
             'Herbology': False,
             'History of Magic': False,
             'Potions': False,
-            'Trasnfiguration': False
+            'Transfiguration': False
         }
+
 
 class Professor(CastleKilmereMember):
     """
@@ -66,7 +67,6 @@ class Ghost(CastleKilmereMember):
 if __name__ == "__main__":
     bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')
     print(bromley.says("Hello!"))
-
 
     cleon = Pupil(name='Cleon Berry',
                   birthyear=2008,
