@@ -9,7 +9,7 @@ class CastleKilmereMember:
         self.sex = sex
 
     def says(self, words):
-        return f"[Self._name} says {words}"
+        return f"{self._name} says {words}"
 
 
 class Pupil(CastleKilmereMember):
@@ -29,5 +29,48 @@ class Pupil(CastleKilmereMember):
             'Broomstick Flying': False,
             'Art': False,
             'Magical Theory': False,
-            'Foreign Magical Systems': False
+            'Foreign Magical Systems': False,
+            'Charms': False,
+            'Defence Against Dark Magic': False,
+            'Divination': False,
+            'Herbology': False,
+            'History of Magic': False,
+            'Potions': False,
+            'Trasnfiguration': False
         }
+
+class Professor(CastleKilmereMember):
+    """
+    Creates a Castle Kilmere Professor
+    """
+
+    def __init__(self, name, birthyear, sex, subject, house=None):
+        super().__init__(name, birthyear, sex)
+        self.subject = subject
+        self.house = house
+
+
+class Ghost(CastleKilmereMember):
+    """
+    Creates a Castle Kilmere Ghost
+    """
+
+    def __init__(self, name, birthyear, sex, year_of_death, house=None):
+        super().__init__(name, birthyear, sex)
+        self.year_of_death = year_of_death
+
+        if house is not None:
+            self.house = house
+
+
+if __name__ == "__main__":
+    bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')
+    print(bromley.says("Hello!"))
+
+
+    cleon = Pupil(name='Cleon Berry',
+                  birthyear=2008,
+                  sex='male',
+                  house='House of Courage',
+                  start_year=2018,
+                  pet=('Cotton', 'Owl'))
